@@ -1,0 +1,588 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    background:linear-gradient( to left, #133eeae1, rgba(0, 0, 0, 0.851));
+    height: 100%;
+    display: flex;
+}    
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    border-radius: 5px;
+    padding: 40px;
+    min-width: 80%;
+    min-height: 80%;
+    margin-top: 4%;
+    margin-left: 10%;
+    width: 40%;
+    font-size: large;
+}
+
+.container-1 {
+    display: flex;
+    justify-content:space-between; 
+    margin-bottom: 20px;    
+}
+
+.container-1 h1 {
+    font-size: large;
+}
+
+::placeholder {
+    color: gray;
+    opacity:1;
+}
+
+.search-container {
+    max-width: 300px;
+    width: 100%;
+}
+
+.search-container .search-box {
+    position: relative;
+    height: 40px;
+    max-width:50px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+#check:checked ~ .search-box {
+    max-width: 380px;
+}
+
+.search-box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.search-box .icon {
+    position:absolute;
+    right: 0;
+    top:0;
+    width: 50px;
+    height: 100%;
+    background-color: #05386b;
+    color: #5cdb95;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#check:checked ~ .search-box .icon{
+    background-color: #05386b;
+    color: green;
+    border-radius: 0 25px 25px 0;
+}
+
+#check {
+    display: none;
+}
+/* .search-wrap {
+    position: relative;
+}
+
+.search-wrap .search-box {
+    width: 100%;
+    height: 50px; 
+}
+
+.search-wrap .search-box .input-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border:0;
+    height: 30px;
+    padding: 12px 25px;
+    padding-right: 70px;
+    font-size: medium;
+    border-radius: 35px;
+    color: var(--text-clr);
+    transition: all 0.2s ease;
+}
+ .search-wrap .search-box .input-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border:0;
+    height: 30px;
+    width: 0;
+    padding: 12px 0px;
+    padding-right: 40px;
+    font-size: medium;
+    border-radius: 35px;
+    color: var(--text-clr);
+    transition: all 0.2s ease;
+    }
+
+ .search-wrap .icon {
+    display: flex;
+}
+
+.search-wrap .search-button{
+    top: 0;
+    right:0;
+    background: white;
+    color: black; 
+    font-size: 15px; 
+    z-index: 999;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.search-wrap .search-button:hover{
+    background: white;
+    color: blue;
+} */
+.container-2
+{
+    height: 70px;
+}
+
+.todo-input 
+{
+    padding: 0; 
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+.todo-input input {
+    width: 60%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 15px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+.todo-input input:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+select {
+    outline: none;
+    border: none;
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+    
+    
+}
+.select {
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.todo-button
+{
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.todo-button button {
+    cursor: pointer;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 0 20px;
+    color:#5cdb95;
+    font-weight: 500;
+    border-radius: 5px;
+    width: fit-content;
+    transition: 0.5s;
+    outline: none;
+    background-color: #05386b;
+}
+
+.todo-button button:hover {
+    background-color: #05386b;
+    color: red;
+}
+
+.container-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 50px;
+    
+
+}
+
+.todo-items {
+ /* Need to change the alignment */
+    list-style: none;
+    width: 100%;
+    padding: 0rem 0rem;
+ }
+
+.todo {
+    margin: 0.5rem 0 0.5rem 0;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+.todo li {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.trash-button,
+.edit-button,
+.completed-button
+{
+    background: white;
+    color: green;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#edit {
+    background: white;
+    color: green;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.trash-button
+{
+    background-color: white;
+    color: red;
+}
+
+.completed-button
+{
+    background-color: white;
+    color: green;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+        background: green;
+}
+
+.delete {
+    text-decoration: line-through;
+    opacity: 0.5;
+        background: red;
+}
+
+.fa-trash-can, .fa-circle-check {
+    pointer-events: none;
+}
+
+
+
+.drop {
+/* transform: translateX(8rem) rotateZ(20deg); */
+    transform: translateX(5rem);
+    opacity: 0;
+}
+
+
+
+
+
+
+/*-----------------Edit Pop-up-------------------------------*/
+.edit-container
+{   
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width:100vw;
+    z-index: 1;
+    overflow: auto;
+}
+
+/* .edit-container.show
+{   
+    opacity: 1;
+    pointer-events: auto;
+} */
+.popup
+{
+    background-color: white;
+    width: 70%;
+    height: 30%;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 300px;
+    margin-left: 240px;
+}
+/*----------------Popup Input--------------------*/
+
+.popup-container
+{
+    padding: 0; 
+    display: flex;
+    justify-content: flex-start;
+}
+.popup-container input {
+    width: 60%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 15px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+.popup-container input:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+.popup-head {
+    display: flex;
+    justify-content: end;
+}
+
+.popup-head button {
+    cursor: pointer;
+    font-size: 30px;
+    color: green;
+    font-weight: 500;
+    border-radius: none;
+    width: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+}
+
+.popup-footer button {
+cursor: pointer;
+height: 30px;
+font-size: 15px;
+border: 2px solid rgb(107, 112, 106);
+padding: 0 20px;
+color:#5cdb95;
+font-weight: 500;
+border-radius: 5px;
+width: fit-content;
+transition: 0.5s;
+outline: none;
+background-color: #05386b;
+}
+
+.popup-footer button:hover {
+background-color: black;
+color: green;
+}
+
+.popup-container label {
+    font-size:25px;
+    font-weight: 600;
+}
+
+    
+
+/*--------------------------------------------------*/
+/* .todo-input input {
+    width: 60%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 15px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+.todo-input input:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+.todo-input button {
+    cursor: pointer ;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 15px;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+
+.todo-button
+{
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.todo-button button {
+    cursor: pointer;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    padding: 0 20px;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+    width: fit-content;
+    transition: 0.5s;
+    outline: none;
+    background-color: #133eeae1;
+}
+
+.todo-button button:hover {
+    background-color: black;
+    color: white;
+}
+
+.todo-containers
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-items {
+     list-style: none;
+    min-width: 90%;
+    
+ }
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.todo li {
+    flex: 1;
+}
+
+.trash-button,
+.complete-button
+{
+    background: white;
+    color: green;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.trash-button
+{
+    background-color: white;
+    color: red;
+}
+.todo-items {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash-can, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+        background: green;
+}
+
+.drop {
+    transform: translateX(8rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.9rem;
+    
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+    width: 20%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid rgb(107, 112, 106);
+    font-weight: 500;
+    border-radius: 5px;
+} */

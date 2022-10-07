@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./Todos.css">
+
+    <title>Todo List</title>
+</head>
+<body>
+
+<div class="container">
+    
+<div class="container-1">
+    <h1> <i class="fa-sharp fa-solid fa-list"></i> Task Lists</h1>
+    
+    <div class="search-container">
+    
+<!-- <div class="search-wrap">
+<div class="search-box">
+<input type="text" name="searchbox" class="input-search" placeholder="Search...">
+</div>
+<div class="search-button">
+<span class="icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+</div>
+</div> -->
+
+<input type="checkbox" id="check">    
+    <div class="search-box">
+        <input type="text" placeholder="Search here...">
+        <label for="check" class="icon">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i> 
+        </label>
+    </div>    
+          
+    </div>
+</div>
+<div class="container-2">    
+<div class="todo-input">    
+        <input class="input" type="text" placeholder="Enter the task...">
+    <div class="select">
+        <select name="todos" class="filter-todo">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="deleted">Deleted</option>
+            <option value="pending">Pending</option>
+        </select>
+    </div>    
+</div>    
+</div>
+<div class="container-3">
+    <ul class="todo-items"></ul>
+    </div>
+ 
+    <div class="todo-button">
+        <button class="clear">Clear</button>
+        <button class="add">Add Task</button>
+    </div>
+         
+</div>
+<script src="./Todos.js"></script>
+<script src="./Search.js"></script>
+</body>
+</html>
+
